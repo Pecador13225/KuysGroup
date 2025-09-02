@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-use App\Models\User;
-
+// Homepage route
 Route::get('/', function () {
     $users = User::all();
     return view('welcome', compact('users'));
+});
+
+// Rene's biography route
+Route::get('/BSIT-3A/rene', function () {
+    return view('rene'); 
 });
