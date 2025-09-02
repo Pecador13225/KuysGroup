@@ -1,108 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biography</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    table {
-      width: 700px;
-      margin: 20px auto;
-      border-collapse: collapse;
-      border: 1px solid #000;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      text-align: center;
-    }
-    th.section-header {
-      background-color: blue;
-      color: white;
-      font-size: 20px;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-    }
-    ul {
-      margin: 0;
-      padding-left: 20px;
-      text-align: left;
-    }
-    a {
-      color: blue;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 20px;
-      font-size: 12px;
-    }
-  </style>
-</head>
-<body>
+ @extends('layout') {{-- use the team layout --}}
 
-  <table>
+@section('title', 'Rene Biography')
+
+@section('content')
+<div class="bg-white shadow-md rounded-lg p-6">
+  <table class="w-full border-collapse border border-gray-300 shadow-lg">
     <tr>
-      <td rowspan="2" style="width: 200px;">
-        <img src="rene.jpg" alt="My Photo">
+      <td rowspan="2" class="w-48 p-4">
+        <img src="{{ asset('images/rene.jpg') }}" alt="My Photo" class="rounded-full shadow-md">
       </td>
-      <th class="section-header">My Biography</th>
+      <th class="bg-blue-600 text-white text-lg p-3">My Biography</th>
     </tr>
-
     <tr>
-      <td>
-        <ul>
+      <td class="p-4">
+        <ul class="list-disc list-inside text-gray-700">
           <li><strong>Name:</strong> Rene S. Garcia</li>
           <li><strong>Birth Date:</strong> March 29, 2004</li>
           <li><strong>Birth Place:</strong> Gabur, Tagudin, Ilocos Sur</li>
-          <li><strong>Hobbies:</strong> Playing Online Games, Playing Basketball, Watching Anime</li>
+          <li><strong>Hobbies:</strong> Playing Online Games, Basketball, Watching Anime</li>
         </ul>
       </td>
     </tr>
-
     <tr>
-      <th colspan="2" class="section-header">About Me</th>
+      <th colspan="2" class="bg-blue-600 text-white text-lg p-3">About Me</th>
     </tr>
     <tr>
-      <td colspan="2">
+      <td colspan="2" class="p-4 text-gray-700">
         My name is Rene S. Garcia. I am 21 years old and a student at Ilocos Sur Polytechnic State College.
         My family lives a simple life. We go through good times and tough times, just like everyone else.
       </td>
     </tr>
-
     <tr>
-      <th colspan="2" class="section-header">Social Media</th>
+      <th colspan="2" class="bg-blue-600 text-white text-lg p-3">Social Media</th>
     </tr>
     <tr>
-      <td colspan="2">
-        <p>Check me out on:</p>
-        <ul>
-          <li><a href="https://www.facebook.com/somerarene">Facebook</a></li>
-          <li><a href="https://www.instagram.com/renxcia?igsh=dnZ1eTg4eWFmaTlm">Instagram</a></li>
-          <li><a href="https://discord.com/users/1396721393860739213">Discord</a></li>
+      <td colspan="2" class="p-4">
+        <p class="mb-2">Check me out on:</p>
+        <ul class="list-disc list-inside text-blue-600">
+          <li><a href="https://www.facebook.com/somerarene" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/renxcia" target="_blank">Instagram</a></li>
+          <li><a href="https://discord.com/users/1396721393860739213" target="_blank">Discord</a></li>
         </ul>
       </td>
     </tr>
   </table>
 
-  <footer>
+  <footer class="mt-6 text-center text-gray-500 text-sm">
     &copy; 2025 Rene S. Garcia. All rights reserved.
   </footer>
-
-</body>
-</html>
-
+</div>
+@endsection
